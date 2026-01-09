@@ -11,6 +11,8 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+ESO484
+calibration_reference_files
 # C extensions
 *.so
 
