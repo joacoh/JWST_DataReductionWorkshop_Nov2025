@@ -1,10 +1,3 @@
-"""
-Stage 1, 2, and 3 MIRI pipeline reduction for The Cosmic Eye
-https://www.stsci.edu/jwst-program-info/download/jwst/pdf/4125/
-
-"""
-
-# _______________________________________________________________________________________________#
 import os
 import pathlib
 import shutil
@@ -23,6 +16,8 @@ from jwst.pipeline.calwebb_image3 import Image3Pipeline  # stage 3
 from jwst.associations import asn_from_list
 from jwst.associations.lib.rules_level3_base import DMS_Level3_Base
 
+from astropy.io import fits
+
 # _______________________________________________________________________________________________#
 #                                        Set up run Parameters
 # _______________________________________________________________________________________________#
@@ -40,10 +35,13 @@ for obs in obs_list:
     # raw_dir is where the uncalibrated (*uncal.fits) are, which were downloaded from MAST
     raw_dir = file_dir / f"{target}/MIRI/{obs}/raw"
     reduced_dir = file_dir / f"{target}/MIRI/{obs}/reduced"
+    finals_dir = file_dir / f"{target}/MIRI/finals"
 
     reduce_stage1 = False
-    reduce_stage2 = True
+    reduce_stage2 = False
     reduce_stage3 = True
+
+    move_to_finals = True
 
     create_config_file = False  # Turn this off after fist creation if want to change defaults
     # _______________________________________________________________________________________________#
@@ -67,7 +65,7 @@ for obs in obs_list:
         src = file_dir / f"{target}/MIRI/stage{stage}_params.asdf"
         dst_dir = eval(f"stage{stage}_dir")
         dst = dst_dir / f"stage{stage}_params.asdf"
-        if not dst.exists():
+        if dst.exists():
             shutil.copy(src, dst)
 
     # ------------------------------ Create the config files ----------------------------------------#
@@ -152,3 +150,42 @@ for obs in obs_list:
             output_dir=str(stage3_dir),  # Directory where outputs will be saved
             config_file=str(stage3_dir / "stage3_params.asdf"),
         )
+
+        # Since we set product_name="stage3" in the association, the output is "stage3_i2d.fits"
+        output_file_path = stage3_dir / "stage3_i2d.fits"
+        
+        if output_file_path.exists():
+            print(f"Renaming final output: {output_file_path.name}...")
+            
+            try:
+                # 2. Open header to get Filter/Subarray
+                with fits.open(output_file_path) as hdul:
+                    header = hdul[0].header
+                    filter_name = header.get('FILTER', 'UNKNOWN').strip()
+                    subarray_name = header.get('SUBARRAY', 'UNKNOWN').strip()
+                
+                # 3. Construct new filename
+                new_filename = f"{filter_name}_{subarray_name}_stage3.fits"
+                new_file_path = stage3_dir / new_filename
+                
+                # 4. Rename the file in place
+                os.rename(output_file_path, new_file_path)
+                print(f" > Success! File renamed to: {new_filename}")
+
+                # 5. Move to Finals (Conditional Step)
+                if move_to_finals:
+                    # Create directory if it doesn't exist
+                    if not os.path.exists(finals_dir):
+                        os.makedirs(finals_dir)
+                        print(f" > Created finals directory: {finals_dir}")
+                    
+                    # Copy the file
+                    dst_path = finals_dir / new_filename
+                    print(f" > Copying {new_filename} to finals folder...")
+                    shutil.copy2(new_file_path, dst_path)
+                    print(f" > File successfully copied to: {dst_path}")
+
+            except Exception as e:
+                print(f" ! Error during renaming or copying: {e}")
+        else:
+            print(f" ! Warning: Expected output {output_file_path.name} not found. Skipping post-processing.")

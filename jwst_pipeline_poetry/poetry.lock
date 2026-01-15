@@ -263,10 +263,7 @@ files = [
 ]
 
 [package.dependencies]
-cffi = [
-    {version = ">=1.0.1", markers = "python_version < \"3.14\""},
-    {version = ">=2.0.0b1", markers = "python_version >= \"3.14\""},
-]
+cffi = {version = ">=1.0.1", markers = "python_version < \"3.14\""}
 
 [[package]]
 name = "arrow"
@@ -656,6 +653,30 @@ webencodings = "*"
 css = ["tinycss2 (>=1.1.0,<1.5)"]
 
 [[package]]
+name = "bokeh"
+version = "3.8.2"
+description = "Interactive plots and applications in the browser from Python"
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = [
+    {file = "bokeh-3.8.2-py3-none-any.whl", hash = "sha256:5e2c0d84f75acb25d60efb9e4d2f434a791c4639b47d685534194c4e07bd0111"},
+    {file = "bokeh-3.8.2.tar.gz", hash = "sha256:8e7dcacc21d53905581b54328ad2705954f72f2997f99fc332c1de8da53aa3cc"},
+]
+
+[package.dependencies]
+contourpy = ">=1.2"
+Jinja2 = ">=2.9"
+narwhals = ">=1.13"
+numpy = ">=1.16"
+packaging = ">=16.8"
+pandas = ">=1.2"
+pillow = ">=7.1.0"
+PyYAML = ">=3.10"
+tornado = {version = ">=6.2", markers = "sys_platform != \"emscripten\""}
+xyzservices = ">=2021.09.1"
+
+[[package]]
 name = "botocore"
 version = "1.40.18"
 description = "Low-level, data-driven core of boto 3."
@@ -768,6 +789,45 @@ numpy = ">=1.21"
 casa = ["casatools (>=6.2.0.12)"]
 docs = ["numpydoc", "sphinx-automodapi"]
 test = ["pytest", "pytest-cov"]
+
+[[package]]
+name = "celerite2"
+version = "0.3.2"
+description = "Fast and scalable Gaussian Processes in 1D"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "celerite2-0.3.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:5e71c92831bad82c2162e36d7a825bf969c28ed6ff2aed63b0f9661603f1ec1e"},
+    {file = "celerite2-0.3.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:65069c52c94ff4780b89253cad326ba12cd58633f6af29290f0abe46498e8755"},
+    {file = "celerite2-0.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:308700056975396676a668847947bbcf91a1a2320999060428f974713edf63aa"},
+    {file = "celerite2-0.3.2-cp310-cp310-win_amd64.whl", hash = "sha256:6ed527e41c2da7c0248478f0203421db5fbb12748426f04b65cc866c1f32a888"},
+    {file = "celerite2-0.3.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:837ba24c3472789111b95ef437ff7caaafd648ef5a6818c092cda0f69b5774a6"},
+    {file = "celerite2-0.3.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:67b89c27e8d34e0d9e5fafe89864b7a5899f700e40723ebf9fc3ee78d0a13537"},
+    {file = "celerite2-0.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:496811917fc85e550b9f86d6b93b97e2b08c179721a11781409d9f4d5d87153b"},
+    {file = "celerite2-0.3.2-cp311-cp311-win_amd64.whl", hash = "sha256:2cc48985e35b258b5ee7317d737e80d40e9579bdd5d6a93ba9294374db55ec4a"},
+    {file = "celerite2-0.3.2-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:53781c7b2e8759bc6a9dc8e86965c6a77da1d2f584cf9c0e3822e20af4c64e3a"},
+    {file = "celerite2-0.3.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:5cf8b80ea8c465508ace18c511f681a7f979c88495fe02b1e93472df32e0a9e5"},
+    {file = "celerite2-0.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9bf284866ea1a5e94c27bc66cb526086ae8f4cb6e6f0a7747e289e5872ddb269"},
+    {file = "celerite2-0.3.2-cp312-cp312-win_amd64.whl", hash = "sha256:da59f1563fb912967025e2ac4e49def0e260f6705574344be8ad04a9a11ddb61"},
+    {file = "celerite2-0.3.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:4e3b72bbe56787d91baa08007c239368bed5709c8e336dfc937116f033552320"},
+    {file = "celerite2-0.3.2-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:18dbb7799cafe8f4b50f09d49be2bcd0c589e3edb0db98318cc3fba0984dc33f"},
+    {file = "celerite2-0.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7aa822eba82f9798d5cc3863201f2a69f5f1e984a5b55e446a99ffdcdf8b679b"},
+    {file = "celerite2-0.3.2-cp39-cp39-win_amd64.whl", hash = "sha256:4a3cbaf48ddb82ea2b858de88609781c91fc94639317360e8e40ecccb1cf94bc"},
+    {file = "celerite2-0.3.2.tar.gz", hash = "sha256:91a90900037ab6e179f653a12d8d0c49fef1d0e9292b0dd5d0aa40ba00018415"},
+]
+
+[package.dependencies]
+numpy = "*"
+
+[package.extras]
+docs = ["breathe", "emcee", "matplotlib", "myst-nb", "numpyro", "pymc (>=5)", "scipy", "sphinx", "sphinx-material", "sphinx_copybutton", "tqdm"]
+jax = ["jax"]
+pymc = ["pymc (>=5.9.2)"]
+pymc3 = ["numpy (<1.22)", "pymc3 (>=3.9)", "xarray (<2023.10.0)"]
+test = ["celerite", "pytest", "scipy"]
+theano = ["numpy (<1.22)", "pymc3 (>=3.9)", "xarray (<2023.10.0)"]
+tutorials = ["emcee", "matplotlib", "numpyro", "pymc (>=5)", "scipy", "tqdm"]
 
 [[package]]
 name = "certifi"
@@ -1350,33 +1410,43 @@ profile = ["gprof2dot (>=2022.7.29)"]
 
 [[package]]
 name = "drizzle"
-version = "2.0.1"
+version = "2.1.1"
 description = "A package for combining dithered images into a single image"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "drizzle-2.0.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:44402d26532cd12ce608f3d0c6c4973cf4830e60e6df440dbd0e2d6732cecb73"},
-    {file = "drizzle-2.0.1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:7690a30001d0dae27a4322258ec1125008618967887833b603aba10885854330"},
-    {file = "drizzle-2.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:34c945d98501e274810d6afd6db38b2a0427fd6b0e617a5958b2c11fdca33979"},
-    {file = "drizzle-2.0.1-cp310-cp310-win32.whl", hash = "sha256:6bb62a972dfdfb95326f986291cc610f64f4b3ce48b24326a6d1e441ae6f4f08"},
-    {file = "drizzle-2.0.1-cp310-cp310-win_amd64.whl", hash = "sha256:7ba90d33bac71c5a8aefdd86b3f81ce7e636c0a0e3f40337e179768670eb2a2f"},
-    {file = "drizzle-2.0.1-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:7b3fdab3e892a318c99a72c585620d0d0d331d8d798c9895b4dc8d698844beea"},
-    {file = "drizzle-2.0.1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:04a40a4404dcbfbc1a6eb3a33d322fc0e57914aa19a7a0d853f2dc8d33161493"},
-    {file = "drizzle-2.0.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2b47464ead7c4ae987aa3b68d47f4f15aafb39f59a16283c2abcd30721fae059"},
-    {file = "drizzle-2.0.1-cp311-cp311-win32.whl", hash = "sha256:5c4e3ed637206051332c31f1ab03eced18db19e92b3b15064b3b30ecf4b841ca"},
-    {file = "drizzle-2.0.1-cp311-cp311-win_amd64.whl", hash = "sha256:226664a31fdc079fd88cda7af89a4872a5d92f3f6ef4f13893a40960178c05e8"},
-    {file = "drizzle-2.0.1-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:b2da39e05a3d89d7a42cbc1793083da5f1804a6226941caed22bb114504b2c01"},
-    {file = "drizzle-2.0.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:c6ab9cb57c1de3865382668c07ea0e2a223a42728846b85d8b824e875be22bc1"},
-    {file = "drizzle-2.0.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:25422252556d3a8456a22b43ef4ccea8ed24382e704a235b30fa5178f1886c6f"},
-    {file = "drizzle-2.0.1-cp312-cp312-win32.whl", hash = "sha256:cc86c4e45bc22611d9f80201f0df48ca2e206c5408dc3ea9a789660a674c43ce"},
-    {file = "drizzle-2.0.1-cp312-cp312-win_amd64.whl", hash = "sha256:48a6804602f73bdb5998b7791dd4ee40b3151ecd7da628d638e211128e00cb11"},
-    {file = "drizzle-2.0.1-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:b8db6ea491e05b05c26dad2af9b6a2719756e75701a274d53f338a8269f2450b"},
-    {file = "drizzle-2.0.1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:b5b85be75966651a7bf6d3ccee215547728f49a5d058652fb22420ad414f7f61"},
-    {file = "drizzle-2.0.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9838c18152a9811224b908d9ce180abe4cc6c0490ad54a433baf3e65ba23d529"},
-    {file = "drizzle-2.0.1-cp313-cp313-win32.whl", hash = "sha256:e184c3d9b3fbc7550846f4174e6c34c42c43d23c247e591ea6757894355a61ec"},
-    {file = "drizzle-2.0.1-cp313-cp313-win_amd64.whl", hash = "sha256:e8376d771ac8731b33c199c25b67987c445912c1cbff71a53e34ef1e1d4318eb"},
-    {file = "drizzle-2.0.1.tar.gz", hash = "sha256:ca051b7bfa405ce5b6d502a05a935f395f07ea28391afc1b78347bccf64d5d80"},
+    {file = "drizzle-2.1.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:3aaa55c42ea7d1470485491d486287d803676c8c67b2926ce8092822922d358d"},
+    {file = "drizzle-2.1.1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:a129ef2db6e9c54e3ede17f3506fafe23c7aaaeeb87fb7121cb015429e6c3144"},
+    {file = "drizzle-2.1.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:5dd3b3fd4261123e63a038d817291551e39847683e130724102f4c9df795c2e0"},
+    {file = "drizzle-2.1.1-cp310-cp310-win32.whl", hash = "sha256:fdfe3b0674f0fe390ac771972603ebe984398bf54f918689402fc4aaf0e4ef22"},
+    {file = "drizzle-2.1.1-cp310-cp310-win_amd64.whl", hash = "sha256:427ddc64610da87606ed9061cbefdbc83d84c51bc00a8a672ce0f92caf21c1dc"},
+    {file = "drizzle-2.1.1-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:c299b3866a71113a184b35766cc6084aa47c0a49afb6682e8a290546ddde0c6c"},
+    {file = "drizzle-2.1.1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:b92548f2a12d6fda798e4128053112ea83970389c6547b288c582d4eea880934"},
+    {file = "drizzle-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:4caffa6bcbb04db4ed5c5a9dff727a8ffc33d8151b0a8acbc6b14e7f74fb9cb6"},
+    {file = "drizzle-2.1.1-cp311-cp311-win32.whl", hash = "sha256:b1c80676f603e9e22663390fb8cf79514a6d7c472bf807ffda4df995e1dec32d"},
+    {file = "drizzle-2.1.1-cp311-cp311-win_amd64.whl", hash = "sha256:e39c524057ae9a0dac08d0a6695c74982e602ebaaf8f28c68889bb27f365e202"},
+    {file = "drizzle-2.1.1-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:7eb9a468327f4d7f5c3078fb9fe6ff03d48f08d7520c6d910a8ecb94be9004a8"},
+    {file = "drizzle-2.1.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:007bc90f0a17266808f07d202ec1a4f4396a71be9870fb11f774ef096e048bf6"},
+    {file = "drizzle-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:f5380267218b40302789872d09d761f7877f9d69f14cbb443f75a41cfa4952e2"},
+    {file = "drizzle-2.1.1-cp312-cp312-win32.whl", hash = "sha256:f56caef52ca362fa8206bcb277eeac27ade6939cc85ca908e07f18406cec8c74"},
+    {file = "drizzle-2.1.1-cp312-cp312-win_amd64.whl", hash = "sha256:d0b13e2cc3b302dd8ad5cabbd8cf5ac4a10ca046616b13b0bbc348ad7d24e6eb"},
+    {file = "drizzle-2.1.1-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:09e2df0caff1cf8010da738070a63fd60d848060223c6714b3689968dce5c174"},
+    {file = "drizzle-2.1.1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:46a1ccf5d68022bdb645ef4a092d9ee1bd39319be2e7d74d3dce448f2e8f410c"},
+    {file = "drizzle-2.1.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:1c72845ac080b9f37454fb8795b7f88532fd2c3f65b032a4da53c1b3378909e3"},
+    {file = "drizzle-2.1.1-cp313-cp313-win32.whl", hash = "sha256:a2a1b0f79c2101be6c165adaf982a8f4afefc22c29eb789c80b286bd1f1fcfbb"},
+    {file = "drizzle-2.1.1-cp313-cp313-win_amd64.whl", hash = "sha256:3a27bb97a141e17aa1cd4c8696c2bbbfe0c0936a184de37fc4490719499276c8"},
+    {file = "drizzle-2.1.1-cp314-cp314-macosx_10_13_x86_64.whl", hash = "sha256:990164b0ec0d7b252c84456ec3c014521179ae11a4e6690371febf2c789838eb"},
+    {file = "drizzle-2.1.1-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:bfcf15f7c6dc6f5bbea43b843bb7be26ce2faf6c72d77f9c169092ada6b6355b"},
+    {file = "drizzle-2.1.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:5c0f87d08cabfa4e2c15fd952e948bebadcb5ea71c9487ea15c1c60a25ec97c3"},
+    {file = "drizzle-2.1.1-cp314-cp314-win32.whl", hash = "sha256:f3f87d03591dba6ad17ee519b831fc9b32b649b4c0414354debdf4501b8a98a8"},
+    {file = "drizzle-2.1.1-cp314-cp314-win_amd64.whl", hash = "sha256:546c64b9dd9a91e7b7a8422a688f3b3b3f26a9a2aaab7bbbc33438bafed6f2fd"},
+    {file = "drizzle-2.1.1-cp314-cp314t-macosx_10_13_x86_64.whl", hash = "sha256:0eb4af4f96e09b188acc67b5be74312e0a89763fa3342e361d290e777a1cc94d"},
+    {file = "drizzle-2.1.1-cp314-cp314t-macosx_11_0_arm64.whl", hash = "sha256:0aa037a4884ed95e862034e1741695b64c8f691df7e09c9d5363fc895a0df90a"},
+    {file = "drizzle-2.1.1-cp314-cp314t-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:bc82180eff1378a401cbe54acde1a317d380fd9a1269d3bb2079757ef15d2605"},
+    {file = "drizzle-2.1.1-cp314-cp314t-win32.whl", hash = "sha256:b1504545466b47daacce6bcdb1b3aff256c712c19d12d06cd78d9afeecbaeabb"},
+    {file = "drizzle-2.1.1-cp314-cp314t-win_amd64.whl", hash = "sha256:e1d3139cbb0be5da481ebf655df77ee3b8f17e0878eb39629307604ac31de49a"},
+    {file = "drizzle-2.1.1.tar.gz", hash = "sha256:c434877f0b0042fd500f93e35b75306d3e6f248d66ccc7652e1464b7a7c5d732"},
 ]
 
 [package.dependencies]
@@ -1909,14 +1979,14 @@ test = ["mock", "objgraph ; sys_platform != \"win32\"", "pytest", "pytest-cov", 
 
 [[package]]
 name = "gwcs"
-version = "0.25.2"
+version = "0.26.1"
 description = "Generalized World Coordinate System"
 optional = false
 python-versions = ">=3.11"
 groups = ["main"]
 files = [
-    {file = "gwcs-0.25.2-py3-none-any.whl", hash = "sha256:731c35062ec39dc6040689a82ebe2f86d97ef51c9855e170ca73997e141b150e"},
-    {file = "gwcs-0.25.2.tar.gz", hash = "sha256:84d08371222d47382e50914c526f65ffc0b827e3c39e14c5ed97ae01143e1a8a"},
+    {file = "gwcs-0.26.1-py3-none-any.whl", hash = "sha256:08829b42265f00669b1e2ea8112093235279b5026b9687b36d5f131f4e131ede"},
+    {file = "gwcs-0.26.1.tar.gz", hash = "sha256:17b443822ecc5bd6ef8be68b6ca279f44869b4a63bbd0761ece07d453f7f7d3e"},
 ]
 
 [package.dependencies]
@@ -2150,6 +2220,18 @@ enabler = ["pytest-enabler (>=2.2)"]
 perf = ["ipython"]
 test = ["flufl.flake8", "importlib_resources (>=1.3) ; python_version < \"3.9\"", "jaraco.test (>=5.4)", "packaging", "pyfakefs", "pytest (>=6,!=8.1.*)", "pytest-perf (>=0.9.2)"]
 type = ["pytest-mypy"]
+
+[[package]]
+name = "iniconfig"
+version = "2.3.0"
+description = "brain-dead simple config-ini parsing"
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = [
+    {file = "iniconfig-2.3.0-py3-none-any.whl", hash = "sha256:f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12"},
+    {file = "iniconfig-2.3.0.tar.gz", hash = "sha256:c76315c77db068650d49c5b56314774a7804df16fee4402c1f19d6d15d8c4730"},
+]
 
 [[package]]
 name = "ipydatawidgets"
@@ -3017,45 +3099,44 @@ files = [
 
 [[package]]
 name = "jwst"
-version = "1.19.2"
+version = "1.20.2"
 description = "Library for calibration of science observations from the James Webb Space Telescope"
 optional = false
-python-versions = ">=3.11"
+python-versions = "<3.14,>=3.11"
 groups = ["main"]
 files = [
-    {file = "jwst-1.19.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:1c1aa0ca1f1bed8be6db83c526dedec8fbfa9fe14e65d2e7feef9c18d8a43a35"},
-    {file = "jwst-1.19.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:75ea27c90cc3c0394a12d34ab1ed71538e7a9e79d25b757de60976a00fc773a9"},
-    {file = "jwst-1.19.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:377825d62a53d665f6b5a9dfdd99a67ddc1407424df4f42f6500795e1f12a8db"},
-    {file = "jwst-1.19.2-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:4f3010b163f0036550054b6b89a412dad8517880a7d64aa04ba600f1b5853a81"},
-    {file = "jwst-1.19.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:5d22859d20263da443446f3154fee5b6d74a15ddb418c8a1a4192d9c0d33b808"},
-    {file = "jwst-1.19.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:a954a47c2392bfd609dad4ebfcfca224bd00788e81aaee381f6fd78b791f56c2"},
-    {file = "jwst-1.19.2-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:8aec7b1000763f8589f941d104f42c3928982f2feae10befdcf5f9ca2c4b3af8"},
-    {file = "jwst-1.19.2-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:725ca588579b9694bf29baac7fbfdc2fc9176ecaedb558dae75dac49ed99a8a9"},
-    {file = "jwst-1.19.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:f719c76bdf7ab71172e4571cbd62954eb66bdc52dd27b78480ce02709a6db670"},
-    {file = "jwst-1.19.2.tar.gz", hash = "sha256:5889a75304ddaa5797b6c6979f01f601e9442280c788a4201bb841664fe58621"},
+    {file = "jwst-1.20.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:052025aabc5ea48cda890ab64488e1d89eb8aa0a54cb5c0aec4ba2883228ea71"},
+    {file = "jwst-1.20.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:0290e2a643111ecd67c9faf4607ad759c1822187cb7fc5ed2af7c165f49a80f8"},
+    {file = "jwst-1.20.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:3adad49ef25750d4e01500f7b63ee7375bcb2ad8fa23560f18e08cb6b37d62d1"},
+    {file = "jwst-1.20.2-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:e4a093a9d9ebe77615c06e74a990c10871a25e14198a7061cce8fa2707b7c4ac"},
+    {file = "jwst-1.20.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:7d625fb605fb7fb4875decd7728ccbd513a6c12d3f3c07b9505e8c8889f5aff8"},
+    {file = "jwst-1.20.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:0b2e1ddb87c2982bafb1fb00a68f621eab418321bea84e48e41b6f3a5f00bb7d"},
+    {file = "jwst-1.20.2-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:d71843ce6e3a1eea6a172197fa8ebe329c4f5779e4ecc31a4822034784ded7f3"},
+    {file = "jwst-1.20.2-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:3d4d9b1575a8eaf23f57b85a995d22067d3014c9250c425f2553949e02d663a0"},
+    {file = "jwst-1.20.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:2892fde1c548d2508b7dc637f1fe42cadc489078bd4955dd6b195dfd96e6a84a"},
+    {file = "jwst-1.20.2.tar.gz", hash = "sha256:a35e656af330839b1a4bac5c47d42ca99a0e06033bdfbf077e7ef4419d21fbce"},
 ]
 
 [package.dependencies]
-asdf = ">=4.0,<5"
+asdf = ">=4.2,<6"
 astropy = ">=6.1"
 BayesicFitting = ">=3.2.2"
 crds = ">=12.0.3"
-drizzle = ">=2.0.1,<2.1.0"
-gwcs = ">=0.25.0,<0.26.0"
+drizzle = ">=2.1.1,<2.2.0"
+gwcs = ">=0.26.0,<0.27.0"
 importlib-metadata = ">=4.11.4"
 jsonschema = ">=4.8"
 numpy = ">=1.25"
-opencv-python-headless = ">=4.6.0.66"
 packaging = ">20.0"
-photutils = ">=1.5.0"
+photutils = ">=2.1.0"
 pyparsing = ">=2.2.1"
 requests = ">=2.31"
 scikit-image = ">=0.20.0"
 scipy = ">=1.14.1"
 spherical-geometry = ">=1.3"
-stcal = ">=1.14.1,<1.15.0"
-stdatamodels = ">=4.0.1,<4.1.0"
-stpipe = ">=0.10.0,<0.11.0"
+stcal = ">=1.15.2,<1.16.0"
+stdatamodels = ">=4.1.0,<4.2.0"
+stpipe = ">=0.11.1,<0.12.0"
 "stsci.imagestats" = ">=1.6.3"
 synphot = ">=1.3"
 tweakwcs = ">=0.8.8"
@@ -3063,9 +3144,9 @@ wiimatch = ">=0.3.2"
 
 [package.extras]
 contrib = ["jwst[docs,test]", "pre-commit (>=4.1.0)"]
-docs = ["matplotlib", "sphinx", "sphinx-astropy", "sphinx-automodapi", "sphinx-rtd-theme"]
+docs = ["matplotlib", "numpydoc", "pytest-doctestplus (>=0.11)", "sphinx", "sphinx-automodapi", "sphinx-rtd-theme", "sphinxcontrib-jquery"]
 sdp = ["jplephem (>=2.9)", "pysiaf (>=0.13.0)"]
-test = ["ci-watson (>=0.10.0)", "pysiaf (>=0.13.0)", "pytest (>=6.0.0)", "pytest-cov (>=2.9.0)", "pytest-doctestplus (>=0.10.0)", "requests_mock (>=1.0)"]
+test = ["ci-watson (>=0.10)", "pysiaf (>=0.13.0)", "pytest (>=6.0.0)", "pytest-cov (>=2.9.0)", "pytest-doctestplus (>=0.10.0)", "requests_mock (>=1.0)"]
 
 [[package]]
 name = "keyring"
@@ -3665,6 +3746,31 @@ files = [
     {file = "multidict-6.6.4-py3-none-any.whl", hash = "sha256:27d8f8e125c07cb954e54d75d04905a9bba8a439c1d84aca94949d4d03d8601c"},
     {file = "multidict-6.6.4.tar.gz", hash = "sha256:d2d4e4787672911b48350df02ed3fa3fffdc2f2e8ca06dd6afdf34189b76a9dd"},
 ]
+
+[[package]]
+name = "narwhals"
+version = "2.15.0"
+description = "Extremely lightweight compatibility layer between dataframe libraries"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "narwhals-2.15.0-py3-none-any.whl", hash = "sha256:cbfe21ca19d260d9fd67f995ec75c44592d1f106933b03ddd375df7ac841f9d6"},
+    {file = "narwhals-2.15.0.tar.gz", hash = "sha256:a9585975b99d95084268445a1fdd881311fa26ef1caa18020d959d5b2ff9a965"},
+]
+
+[package.extras]
+cudf = ["cudf (>=24.10.0)"]
+dask = ["dask[dataframe] (>=2024.8)"]
+duckdb = ["duckdb (>=1.1)"]
+ibis = ["ibis-framework (>=6.0.0)", "packaging", "pyarrow-hotfix", "rich"]
+modin = ["modin"]
+pandas = ["pandas (>=1.1.3)"]
+polars = ["polars (>=0.20.4)"]
+pyarrow = ["pyarrow (>=13.0.0)"]
+pyspark = ["pyspark (>=3.5.0)"]
+pyspark-connect = ["pyspark[connect] (>=3.5.0)"]
+sqlframe = ["sqlframe (>=3.22.0,!=3.39.3)"]
 
 [[package]]
 name = "nbclassic"
@@ -4337,6 +4443,22 @@ test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=8.3.4)", "pytest-
 type = ["mypy (>=1.14.1)"]
 
 [[package]]
+name = "pluggy"
+version = "1.6.0"
+description = "plugin and hook calling mechanisms for python"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "pluggy-1.6.0-py3-none-any.whl", hash = "sha256:e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746"},
+    {file = "pluggy-1.6.0.tar.gz", hash = "sha256:7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3"},
+]
+
+[package.extras]
+dev = ["pre-commit", "tox"]
+testing = ["coverage", "pytest", "pytest-benchmark"]
+
+[[package]]
 name = "prometheus-client"
 version = "0.23.1"
 description = "Python client for the Prometheus monitoring system."
@@ -4626,6 +4748,28 @@ files = [
 
 [package.extras]
 diagrams = ["jinja2", "railroad-diagrams"]
+
+[[package]]
+name = "pytest"
+version = "9.0.2"
+description = "pytest: simple powerful testing with Python"
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = [
+    {file = "pytest-9.0.2-py3-none-any.whl", hash = "sha256:711ffd45bf766d5264d487b917733b453d917afd2b0ad65223959f59089f875b"},
+    {file = "pytest-9.0.2.tar.gz", hash = "sha256:75186651a92bd89611d1d9fc20f0b4345fd827c41ccd5c299a868a05d70edf11"},
+]
+
+[package.dependencies]
+colorama = {version = ">=0.4", markers = "sys_platform == \"win32\""}
+iniconfig = ">=1.0.1"
+packaging = ">=22"
+pluggy = ">=1.5,<2"
+pygments = ">=2.7.2"
+
+[package.extras]
+dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "requests", "setuptools", "xmlschema"]
 
 [[package]]
 name = "python-dateutil"
@@ -5917,29 +6061,29 @@ full = ["httpx (>=0.27.0,<0.29.0)", "itsdangerous", "jinja2", "python-multipart 
 
 [[package]]
 name = "stcal"
-version = "1.14.1"
+version = "1.15.2"
 description = "STScI tools and algorithms used in calibration pipelines"
 optional = false
-python-versions = ">=3.11"
+python-versions = "<3.14,>=3.11"
 groups = ["main"]
 files = [
-    {file = "stcal-1.14.1-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:9c9590b55a6c510eabaaf3f1d4c301685651699cb81352d77723a50d0254b6d3"},
-    {file = "stcal-1.14.1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:935332244977e83ab4837dcca0b3e694d3101b259611ee042f2c724976ed7c67"},
-    {file = "stcal-1.14.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:99f9e5545204dd5d3f89f4be30ed87f51bd0680181ca1bc758a038557ab3bada"},
-    {file = "stcal-1.14.1-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:2e06b362d9964f585d933787df50cf37c9d96babd904cf147bf2720a57ee4b95"},
-    {file = "stcal-1.14.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:3221ca535420c5c74eac48aefe7f8f397676f2bb81577971223c27d10d8e4c02"},
-    {file = "stcal-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6aed2dd26fe54ced0ea1b981bf4e3e41f9193068003e3f50d8301970e799a62b"},
-    {file = "stcal-1.14.1-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:b26298a787d967bf9e94eb1917c0fa0740bd9e650149baf51e8156ca8b8bd397"},
-    {file = "stcal-1.14.1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:60e1d433bbae8aaa5efc609b4826ad9f0bbae4a95476d233210dbc0b767d2224"},
-    {file = "stcal-1.14.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:94caaac4880cca8fa6bc3f8f42eb5e0aa9fb4b3f094828135832880377b2d35e"},
-    {file = "stcal-1.14.1.tar.gz", hash = "sha256:12dff3b0c906ce40edc4d7e6a7d828bb0b59cba02a507c7872a638b2a80d7cf8"},
+    {file = "stcal-1.15.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:5da3568ec1954f991240ee8c1cae4fbeccc0bc8891aee747d0629e33d8caf454"},
+    {file = "stcal-1.15.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:6ee42af28f43272a6a24fbf87570c4956871d24f82e447cc581f34fe4590281f"},
+    {file = "stcal-1.15.2-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:1992b9ec3ca06b7325d1769c967d8ac7f75a9fc40ed1816d64ec330799376b25"},
+    {file = "stcal-1.15.2-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:6c5023f9d82793bffe06b815e91f826f8e2582070aa9d358bfaa9542ed2e0392"},
+    {file = "stcal-1.15.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:63527dbfbc2380c96047434a4f7c09e2549cf518121f3ab6a21f29be4d3a1962"},
+    {file = "stcal-1.15.2-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:d171d4f1dcc5b4085a3a63d418d4822ef33dd09824201ddb772d8f796aa04fab"},
+    {file = "stcal-1.15.2-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:364706005ed1c35213d3a8cf053fdb7b169e201b03dc5bd4277aa477d1319adf"},
+    {file = "stcal-1.15.2-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:8ec4fdc8073f36881648ad9d142aec3e91a0f9b1181754117fb7c4b792a81aa9"},
+    {file = "stcal-1.15.2-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:db59ee6f8f66731762ef183c7bbfcabd14c79b9bf1d830f29c0708b8dab2f1ea"},
+    {file = "stcal-1.15.2.tar.gz", hash = "sha256:a1f00567af69d4e53031bceffaebf65de804409195095451ecdca5340cb8fc53"},
 ]
 
 [package.dependencies]
 asdf = ">=3.3.0"
 astropy = ">=6.0.0"
 drizzle = ">=2.0.1"
-gwcs = ">=0.22.0"
+gwcs = ">=0.25.2"
 numpy = ">=1.25.0"
 opencv-python-headless = ">=4.6.0.66"
 requests = ">=2.22"
@@ -5954,14 +6098,14 @@ test = ["psutil", "pytest (>=6)", "pytest-cov", "pytest-doctestplus"]
 
 [[package]]
 name = "stdatamodels"
-version = "4.0.1"
+version = "4.1.0"
 description = "Core support for DataModel classes used in calibration pipelines"
 optional = false
 python-versions = ">=3.11"
 groups = ["main"]
 files = [
-    {file = "stdatamodels-4.0.1-py3-none-any.whl", hash = "sha256:ec50b2db659cbdbf401de1ca933f872243bf8386c939c2c8d7c4db547075db25"},
-    {file = "stdatamodels-4.0.1.tar.gz", hash = "sha256:f120645b59f1f2c4fa8818894f0e38a1af28abd943ae22b2d4f6d952b0e3ddd3"},
+    {file = "stdatamodels-4.1.0-py3-none-any.whl", hash = "sha256:fe8b4337de6cdd4a57fe791ed71de703ba8bb72e93f61860e9308293280bd3ef"},
+    {file = "stdatamodels-4.1.0.tar.gz", hash = "sha256:00d7b76e62e4032296e84c8f2cf947ece8c242e12494adc139637b28e03b8abf"},
 ]
 
 [package.dependencies]
@@ -5973,18 +6117,18 @@ numpy = ">=1.25"
 
 [package.extras]
 docs = ["numpydoc", "sphinx", "sphinx-asdf (>=0.1.1)", "sphinx-automodapi", "sphinx-rtd-theme"]
-test = ["crds (>=11.17.1)", "psutil", "pytest (>=4.6.0)", "pytest-doctestplus", "pyyaml", "requests"]
+test = ["crds (>=11.17.1)", "psutil", "pytest (>=4.6.0)", "pytest-asdf-plugin", "pytest-doctestplus", "pyyaml", "requests", "scipy (>=1.9.2)"]
 
 [[package]]
 name = "stpipe"
-version = "0.10.0"
+version = "0.11.1"
 description = "Framework for calibration pipeline software"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "stpipe-0.10.0-py3-none-any.whl", hash = "sha256:bae4df0d6236cc51136cc48d29c272fd00bff326949077e971b26385d19ccb53"},
-    {file = "stpipe-0.10.0.tar.gz", hash = "sha256:616c54d70ae98a43a666b1be19001d2e198694d02a85cdfb66acff799746befc"},
+    {file = "stpipe-0.11.1-py3-none-any.whl", hash = "sha256:06e5e99073796fe0532af93d83408c0db854d879e70f56ab5180f03ed04da847"},
+    {file = "stpipe-0.11.1.tar.gz", hash = "sha256:8e6b76fe390c1ded96c1f36d213460365b80cfad8f003ead58b82e4e250ccdaa"},
 ]
 
 [package.dependencies]
@@ -6273,6 +6417,28 @@ traitlets = ">=4.2.2"
 
 [package.extras]
 test = ["numpy", "pandas", "pytest", "xarray"]
+
+[[package]]
+name = "tshirt"
+version = "0.4"
+description = "A package to analyze time series data, especially for exoplanets"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "tshirt-0.4-py3-none-any.whl", hash = "sha256:4f46116cfb99bc05fb549fba17ef5166ceccee4a22d56a984797b18204f34a02"},
+    {file = "tshirt-0.4.tar.gz", hash = "sha256:799b55dde61c5f056cf0dea54515358809cc4097c86be130de8d1ab75c860a77"},
+]
+
+[package.dependencies]
+astropy = ">=2.0"
+bokeh = ">=1.4.0"
+celerite2 = "*"
+numpy = ">=1.15"
+photutils = ">=0.4.1"
+pytest = "*"
+scipy = ">=1.1.0"
+tqdm = ">=4.46.0"
 
 [[package]]
 name = "tweakwcs"
@@ -6882,6 +7048,18 @@ docs = ["sphinx"]
 test = ["pytest", "pytest-cov"]
 
 [[package]]
+name = "xyzservices"
+version = "2025.11.0"
+description = "Source of XYZ tiles providers"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "xyzservices-2025.11.0-py3-none-any.whl", hash = "sha256:de66a7599a8d6dad63980b77defd1d8f5a5a9cb5fc8774ea1c6e89ca7c2a3d2f"},
+    {file = "xyzservices-2025.11.0.tar.gz", hash = "sha256:2fc72b49502b25023fd71e8f532fb4beddbbf0aa124d90ea25dba44f545e17ce"},
+]
+
+[[package]]
 name = "yarl"
 version = "1.20.1"
 description = "Yet another URL library"
@@ -7022,5 +7200,5 @@ type = ["pytest-mypy"]
 
 [metadata]
 lock-version = "2.1"
-python-versions = "^3.12"
-content-hash = "81ecb0c679d8cada7176e40519b97f150bdb577004c6aed0200541d0ed027108"
+python-versions = ">=3.12,<3.14"
+content-hash = "c4e37a21a87a6a3b0b182f1090246433a572ea503f98b916f8e2b3eee043e20e"
