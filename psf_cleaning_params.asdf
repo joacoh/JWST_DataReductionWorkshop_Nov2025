@@ -1,0 +1,91 @@
+#ASDF 1.0.0
+#ASDF_STANDARD 1.6.0
+%YAML 1.1
+%TAG ! tag:stsci.edu:asdf/
+--- !core/asdf-1.1.0
+asdf_library: !core/software-1.0.0 {author: The ASDF Developers, homepage: 'http://github.com/asdf-format/asdf',
+  name: asdf, version: 5.1.0}
+history:
+  extensions:
+  - !core/extension_metadata-1.0.0
+    extension_class: asdf.extension._manifest.ManifestExtension
+    extension_uri: asdf://asdf-format.org/core/extensions/core-1.6.0
+    manifest_software: !core/software-1.0.0 {name: asdf_standard, version: 1.4.0}
+    software: !core/software-1.0.0 {name: asdf, version: 5.1.0}
+params:
+  F150W:
+    SN: 7.0
+    alpha: 1
+    bg_coords:
+    - &id001 [3595, 3076]
+    - &id002 [2269, 325]
+    - &id003 [4098, 1163]
+    - &id004 [644, 3247]
+    bg_coords_final:
+    - &id005 [343, 817]
+    - &id006 [1483, 1195]
+    - &id007 [1144, 109]
+    - &id008 [1534, 1288]
+    jitter_sigma: 0.01
+    num_iter: 2
+    position: &id009 [2109, 2315]
+    psf_fov: 1000
+    size_pixels: 2000
+    subarray: SUB640
+  F200W:
+    SN: 7.0
+    alpha: 1
+    bg_coords:
+    - *id001
+    - *id002
+    - *id003
+    - *id004
+    bg_coords_final:
+    - *id005
+    - *id006
+    - *id007
+    - *id008
+    jitter_sigma: 0.01
+    num_iter: 2
+    position: *id009
+    psf_fov: 1200
+    size_pixels: 2000
+    subarray: SUB640
+  F335M:
+    SN: 5.0
+    alpha: 1.0
+    bg_coords:
+    - &id010 [847, 4363]
+    - &id011 [3727, 589]
+    - &id012 [313, 1075]
+    - &id013 [4531, 709]
+    bg_coords_final:
+    - &id014 [171, 101]
+    - &id015 [681, 1009]
+    - &id016 [921, 1011]
+    - [105, 1037]
+    jitter_sigma: 0.01
+    num_iter: 2
+    position: &id017 [991, 1106]
+    psf_fov: 800
+    size_pixels: 1200
+    subarray: SUB640
+  F430M:
+    SN: 5.0
+    alpha: 1.0
+    bg_coords:
+    - *id010
+    - *id011
+    - *id012
+    - *id013
+    bg_coords_final:
+    - *id014
+    - *id015
+    - *id016
+    jitter_sigma: 0.0
+    num_iter: 2
+    position: *id017
+    psf_fov: 800
+    size_pixels: 1200
+    subarray: SUB640
+...
