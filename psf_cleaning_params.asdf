@@ -13,6 +13,25 @@ history:
     manifest_software: !core/software-1.0.0 {name: asdf_standard, version: 1.4.0}
     software: !core/software-1.0.0 {name: asdf, version: 5.1.0}
 params:
+  F1130W:
+    SN: 7.0
+    alpha: 3
+    bg_coords:
+    - &id010 [1001, 303]
+    - &id011 [847, 769]
+    - &id012 [400, 910]
+    - &id013 [651, 1061]
+    bg_coords_final:
+    - &id023 [750, 150]
+    - &id024 [200, 100]
+    - &id025 [750, 700]
+    - &id026 [400, 100]
+    jitter_sigma: 0.01
+    num_iter: 2
+    position: &id014 [759, 590]
+    psf_fov: 800
+    size_pixels: 800
+    subarray: SUB256
   F150W:
     SN: 7.0
     alpha: 1
@@ -51,22 +70,40 @@ params:
     psf_fov: 1200
     size_pixels: 2000
     subarray: SUB640
+  F2100W:
+    SN: 7.0
+    alpha: 5
+    bg_coords:
+    - *id010
+    - *id011
+    - *id012
+    - *id013
+    bg_coords_final:
+    - [541, 207]
+    - [661, 76]
+    - [645, 51]
+    - [689, 365]
+    jitter_sigma: 0.02
+    num_iter: 2
+    position: *id014
+    psf_fov: 800
+    size_pixels: 800
+    subarray: SUB256
   F335M:
     SN: 5.0
     alpha: 1.0
     bg_coords:
-    - &id010 [847, 4363]
-    - &id011 [3727, 589]
-    - &id012 [313, 1075]
-    - &id013 [4531, 709]
+    - &id015 [847, 4363]
+    - &id016 [3727, 589]
+    - &id017 [313, 1075]
+    - &id018 [4531, 709]
     bg_coords_final:
-    - &id014 [171, 101]
-    - &id015 [681, 1009]
-    - &id016 [921, 1011]
-    - [105, 1037]
+    - &id019 [171, 101]
+    - &id020 [681, 1009]
+    - &id021 [921, 1011]
     jitter_sigma: 0.01
     num_iter: 2
-    position: &id017 [991, 1106]
+    position: &id022 [991, 1106]
     psf_fov: 800
     size_pixels: 1200
     subarray: SUB640
@@ -74,18 +111,37 @@ params:
     SN: 5.0
     alpha: 1.0
     bg_coords:
+    - *id015
+    - *id016
+    - *id017
+    - *id018
+    bg_coords_final:
+    - *id019
+    - *id020
+    - *id021
+    jitter_sigma: 0.0
+    num_iter: 2
+    position: *id022
+    psf_fov: 800
+    size_pixels: 1200
+    subarray: SUB640
+  F770W:
+    SN: 7.0
+    alpha: 3
+    bg_coords:
     - *id010
     - *id011
     - *id012
     - *id013
     bg_coords_final:
-    - *id014
-    - *id015
-    - *id016
-    jitter_sigma: 0.0
+    - *id023
+    - *id024
+    - *id025
+    - *id026
+    jitter_sigma: 0.01
     num_iter: 2
-    position: *id017
+    position: *id014
     psf_fov: 800
-    size_pixels: 1200
-    subarray: SUB640
+    size_pixels: 800
+    subarray: SUB256
 ...

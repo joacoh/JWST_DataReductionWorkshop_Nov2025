@@ -243,7 +243,44 @@ params = {
         'psf_fov': 1200,
         'num_iter': 2,
         'bg_coords_final': [(343, 817), (1483, 1195), (1144,109), (1534,1288)]
+    },
+    'F770W': {
+        'subarray': 'SUB256',
+        'bg_coords': [(1001, 303), (847, 769), (400,910), (651, 1061)],
+        'SN': 7.0,
+        'position': (759, 590),
+        'size_pixels': 800,
+        'jitter_sigma': 0.01,
+        'alpha': 3,
+        'psf_fov': 800,
+        'num_iter': 2,
+        'bg_coords_final': [(750, 150), (200, 100), (750,700), (400,100)]
+    },
+    'F1130W': {
+        'subarray': 'SUB256',
+        'bg_coords': [(1001, 303), (847, 769), (400,910), (651, 1061)],
+        'SN': 7.0,
+        'position': (759, 590),
+        'size_pixels': 800,
+        'jitter_sigma': 0.01,
+        'alpha': 3,
+        'psf_fov': 800,
+        'num_iter': 2,
+        'bg_coords_final': [(750, 150), (200, 100), (750,700), (400,100)]
+    },
+    'F2100W': {
+        'subarray': 'SUB256',
+        'bg_coords': [(1001, 303), (847, 769), (400,910), (651, 1061)],
+        'SN': 7.0,
+        'position': (759, 590),
+        'size_pixels': 800,
+        'jitter_sigma': 0.02,
+        'alpha': 5,
+        'psf_fov': 800,
+        'num_iter': 2,
+        'bg_coords_final': [(541, 207), (661, 76), (645,51), (689,365)]
     }
+
 }
 
 tree = {'params': params}
@@ -252,7 +289,7 @@ af.write_to('psf_cleaning_params.asdf')
 
 if __name__ == '__main__':
 
-    instrument = 'NIRCam'  # Assume NIRCam for now
-    filter_name = 'F430M'  # Example filter
+    instrument = 'MIRI'  # Assume NIRCam for now
+    filter_name = 'F2100W'  # Example filter
 
     main(instrument, filter_name)
